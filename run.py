@@ -24,4 +24,3 @@ yag.send(to='168504524@qq.com',
          subject='市南项目报告',
          contents=contents,
          attachments=r'./report.html')
-print('a')
