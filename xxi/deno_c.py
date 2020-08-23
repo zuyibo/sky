@@ -1,14 +1,9 @@
-import json
-vipData = '''{
-    "aac003":"tom",
-    "crm003":"1",
-    "tel":"135213123"
-    }'''
+filedir = r"C:\Users\18836\Desktop\sq1.txt"
+fo = open(filedir,'rb')
+print(fo.read())
+print('操作前--->',fo.tell())
+print(fo.read(2))
+print('操作后--->',fo.tell())
 
-
-print('转换前---->',type(vipData))
-temp = json.loads(vipData)
-temp['aac003'] = 'jack'
-print('转换后---->',type(temp),temp)
-
-print(json.dumps(temp),type(json.dumps(temp)))
+fo.seek(1,1)
+print('seek后--->',fo.tell())
