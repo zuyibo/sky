@@ -1,32 +1,13 @@
-# a = [1,2,34,4,56]
-# b = [1,2,45,6,34]
-# L = []
-#
-# for one in range(len(a)):
-#     data = a[one]+b[one]
-#     L.append(data)
-# print(L)
+filedir1 = r"C:\Users\18836\Desktop\aa.txt"
+filedir2 = r"C:\Users\18836\Desktop\aabb.txt"
+with open(filedir1,encoding='utf8') as rFile, open(filedir2,'w') as wFile:
+    lines = rFile.read().splitlines()
+    for line in lines:
+        temp = line.split(';')
+        name = temp[0].split(':')[1].strip()
+        salary = temp[1].split(':')[1].strip()
+        salary = int(salary)
 
-
-nameListt = ['tom','lili','jack']
-
-# i = 0
-# while i<len(nameListt):
-#     print(nameListt[i])
-#     # i +=1
-
-# data = open(r"C:\Users\18836\Desktop\sq.txt",'w',encoding='utf8')
-# for one in range(1,1001):
-#     aaa = f'sq{one:0>3},123456\n'
-#     print(aaa)
-#
-#     data.write(aaa)
-
-# for one in range(0,2):
-#     for name in nameListt:
-#         if name == 'lili':
-#             break
-#         print(name)
-
-
-
+        info = f'name:{name:>6};salary:{salary:>6};tax:{int(salary*0.1):>6};income:{int(salary*0.9):>6}'
+        print(info)
+        wFile.write(info+'\n')

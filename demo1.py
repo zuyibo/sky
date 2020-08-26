@@ -18,3 +18,4 @@ class Case01(unittest.TestCase):
         r = requests.get(self.url, self.payload)
         result = r.json()
         self.assertEqual(result['result']['realtime']['info'], '多云')
+
