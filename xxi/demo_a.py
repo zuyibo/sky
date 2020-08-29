@@ -1,9 +1,3 @@
-print('----------------a')
+from random import randint
 
-print('-----------------------b')
-
-def sumFun(a,b):
-    print('哈哈哈哈')
-
-def difFun(a,b):
-    print('嘻嘻嘻嘻')
+print(randint(1,10))
