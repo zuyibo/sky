@@ -1,2 +1,2 @@
-# Tiger   nickName inWeight roar feed  SouTiger
-
+a = 'applea'
+print(a.count('a'))
